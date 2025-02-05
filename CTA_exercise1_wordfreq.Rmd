@@ -546,6 +546,9 @@ evtsperyr_race <- evdes_race %>%
 
 head(evtsperyr_race)
 
+hebing_evde_race<-evdes_race %>%
+  mutate(wordcorpus=evdes_race$description+evdes_race$title+evdes_race$sub_title)
+#:)remain error  
 tidy_des_race <- evdes_race %>% 
   tolower(des1=description) 
 
