@@ -453,7 +453,14 @@ ggplot(edbf_counts_both, aes(year, sum_wom / year_total, group=genre, color=genr
                      expand = c(0, 0), limits = c(0, NA)) +
   theme_tufte(base_family = "Helvetica") 
 ```
+#year,genre,age,and age 4-7-YilingXiong
 
+```{r}
+edbf_yga<- edbfdata %>%
+  select(year,genre,age_category)
+edbf_age <- edbf_yga %>%
+  filter(age_category=="AGE 4 - 7")
+```
 
 2. Choose another set of terms by which to filter (e.g., race-related words) and plot their frequency over time.
 
