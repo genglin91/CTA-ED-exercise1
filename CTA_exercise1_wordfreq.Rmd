@@ -459,7 +459,7 @@ ggplot(edbf_counts_both, aes(year, sum_wom / year_total, group=genre, color=genr
 edbf_yga<- edbfdata %>%
   select(year,genre,age_category)
 edbf_age <- edbf_yga %>%
-  filter(age_category=="AGE 4 - 7")
+  filter(age_category=="AGE 4 - 7"|age_category=="AGE 6 -10")
 head(edbf_age)
 ```
 
